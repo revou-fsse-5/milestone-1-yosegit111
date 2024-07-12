@@ -3,8 +3,6 @@ Hi, my name is Yosephine Gita Asaria Hutauruk
 # Gita's Profile
 Tech sales professional currently working as Account Executive at MongoDB.
 
-![gambar](./assets/gita.webp)
-
 ## Connect with me
 |Socials   |Link   |
 |-------|------------|
