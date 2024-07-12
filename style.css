@@ -1,0 +1,849 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* custom font import */
+
+@font-face{
+    font-family:'Lexend Deca';
+    src:('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+}
+
+@font-face{
+    font-family:'Noto Serif';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+h1 {
+    font-family: 'Noto Serif', sans-serif;
+    font-weight: 350;
+    font-size: 8vw;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+h2 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 200;
+    font-size: 3vw;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: 0.015em;
+    -webkit-font-smoothing: antialiased;
+  }  
+
+  h3 {
+    font-family: 'Noto Serif', sans-serif;
+    font-weight: 250;
+    font-size: 1.5vw;
+    line-height: 1.15;
+    letter-spacing: 0.025em;
+    -webkit-font-smoothing: antialiased;
+  }  
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: 0.015em;
+  }
+
+a {
+    text-decoration:none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    font-weight: 200;
+    line-height: 1.05;
+    letter-spacing: 0.015em;
+
+  }
+
+/* custom font for screen <=800px */  
+  @media (max-width: 800px){
+    h1 {
+        font-family: 'Noto Serif', sans-serif;
+        font-weight: 350;
+        font-size: 7vh;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        -webkit-font-smoothing: antialiased;
+      }
+    
+    h2 {
+        font-family: 'Lexend Deca', sans-serif;
+        font-weight: 200;
+        font-size: 4.5vh;
+        font-style: normal;
+        line-height: 1.15;
+        letter-spacing: 0.015em;
+        -webkit-font-smoothing: antialiased;
+      }  
+    
+      h3 {
+        font-family: 'Noto Serif', sans-serif;
+        font-weight: 250;
+        font-size: 2.7vh;
+        line-height: 1.15;
+        letter-spacing: 0.025em;
+        -webkit-font-smoothing: antialiased;
+      }  
+    
+    body {
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1.5vh;
+        font-weight: 200;
+        line-height: 1.05;
+        letter-spacing: 0.015em;
+      }
+    
+    a {
+        text-decoration:none;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 2vh;
+        font-weight: 200;
+        line-height: 1.05;
+        letter-spacing: 0.015em;
+    
+      }
+    }
+
+/*custom font for screen >800px*/  
+@media (min-width:800px){
+    nav {
+        position:fixed;
+        padding-top: 15px; 
+        padding-bottom: 15px;
+        padding-right: 15px;
+        width: 100%;
+        float:right;
+        background-color:white;
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+        z-index:1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .logo {
+        flex:10%;
+    }
+    .menu {
+        flex:90%;
+    }
+
+/* hamburger button display = none for normal screen resolution */  
+.off-screen-menu{
+    display: none;
+}
+
+.ham-menu{
+    display:none;
+}
+
+/*erasing default list styling*/  
+nav ul {
+    list-style-type: none;
+  }
+
+/*styling list for screen resolution >800px*/  
+nav ul li {
+    float: left;
+    margin-right: 0.5em;
+  }
+
+nav ul li a {
+    padding: 0.25em 1em;
+    text-shadow: none;
+    color:rgb(0, 0, 0); 
+    border-radius: 0.5em 0.5em;
+  }
+
+nav ul li a:hover {
+    font-size: 1.05vw;
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    border-bottom: 5px solid #023430;
+    transition: ease-in 0.2s;
+  }  
+}
+
+
+/* styling list for screen resolution <=800px and applying hamburger button */ 
+@media (max-width:800px){
+    nav{
+        width:100%;
+        padding:1rem;
+        height:25px;
+        display:flex;
+        background-color: white;
+        position:fixed;
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+        z-index:1;
+    }
+
+.menu{
+    display: none;
+}
+.logo{
+    width:20vh;
+    height:20vh;
+    text-align: left;
+    justify-content: center;
+}
+
+/* off-screen-menu */
+.off-screen-menu ul {
+    list-style-type: none;
+  }  
+
+  .off-screen-menu a {
+    width: 100%;
+    font-size: 2.3vh;
+    color:#001E2B;
+    line-height: 1.8;
+  }
+
+.off-screen-menu a:hover {
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    background-color: #cef1d0;
+    line-height: 2.5;
+    padding: 0.2em 0.5em;
+    border-radius: 1em 1em;
+    transition: ease-in 0.2s;
+  }
+
+
+.off-screen-menu{
+    background-color:white;
+    opacity:90%;
+    border-radius: 1em 1em;
+    height:50%;
+    width:30%;
+    max-width:450px;
+    position:fixed;
+    top:80px;
+    right:-450px; /* off screen menu not further right off the screen */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    transition: .3s ease;
+    z-index:1
+}
+
+.off-screen-menu.active {
+    right: 10px; /* off screen menu not 10px right in the screen */
+}
+/* hamburger menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+}
+
+/* manually drawing hamburger button with span */
+.ham-menu span {
+    height: 5px;
+    width: 80%;
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    left: -10%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 10%;
+}
+.ham-menu span:nth-child(3) {
+    top: 40%;
+}
+
+/* transforming hamburger button to X shape when clicked */
+.ham-menu.active span:nth-child(1) {
+    top: 25%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 25%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+}
+
+/* styling header */
+@media (min-width:800px){
+header{
+    padding-top:8vw;
+    background-color: #023430;
+    width:100%;
+    text-align: left;
+    color:white;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+}
+
+.header-description{
+    flex: 50%;
+    padding-left: 5vw;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-description h2{
+    padding-bottom:10px;
+}
+
+.header-description h3{
+    padding-bottom:20px;
+}
+
+.logo-header {
+    flex:50%;
+    padding-top: 2vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+}
+
+
+@media (max-width:800px){
+    header{
+        background-color: #023430;
+        color: white;
+        padding: 10vh 5vw 5vh 5vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-description{
+        justify-content: center;
+        align-content: center;
+    }
+
+    .header-description h1{
+        text-align: center;
+        padding-bottom:10px;
+    }
+
+    .header-description h2{
+        text-align: center;
+        padding-bottom:10px;
+    }
+    
+    .header-description h3{
+        text-align: justify;
+        padding-bottom:20px;
+    }
+    
+    .logo-header {
+        padding-top:2vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+button {
+    background: none;
+	color: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+    font: inherit;
+}
+
+/* styling different types of button */
+.signupButton{
+    padding: 1em 1em;
+    background-color:black;
+    border-color:black;
+    color: white;
+    border-radius: 1em 1em;
+}
+
+.signupButton:hover{
+    border-bottom: 2px solid white;
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    transition: ease-in 0.2s;
+}
+.contactButton{
+    padding: 1em 1em;
+    background-color:whitesmoke;
+    border-color:whitesmoke;
+    color: darkgreen;
+    border-radius: 1em 1em;
+}
+
+.contactButton:hover{
+    border-bottom: 2px solid black;
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    transition: ease-in 0.2s;
+}
+
+.submitButton{
+    padding: 1em 1em;
+    background-color:#00ED64;
+    border-color:none;
+    color: black;
+    width:300px;
+    border-radius: 1em 1em;
+}
+
+.submitButton:hover{
+    border-bottom: 2px solid white;
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    transition: ease-in 0.2s;
+}
+@media (max-width:800px){
+    button{
+        font-size:1.5vh;
+}
+}
+
+section{
+    padding-top:20px;
+    padding-bottom:50px;
+}
+
+
+/* horizontal flex for media with screen resolution >800px*/
+@media (min-width:800px){
+.about{
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px 0 10px;
+}
+
+.video{
+    flex: 40%;
+    padding-left: 2vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.video iframe{
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    width:50vw;
+    height:30vw;
+}
+
+.video figcaption{
+    padding-top:1vw;
+    font-size:small;
+    text-align: center; 
+}
+
+.profile{
+    flex: 60%;
+    padding: 2vw 2vw 2vw 2vw;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.profile h2{
+    padding-bottom:10px;
+}
+
+.profile h3{
+    padding-bottom:20px;
+}
+}
+
+/* vertical flex for media with screen resolution >800px*/
+@media (max-width:800px){
+    .about{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px 0 10px;
+    }
+    
+    .video{
+        flex: 40%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .video iframe{
+        box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+        width:90vw;
+        height:40vh;
+    }
+    
+    .video figcaption{
+        padding-top:1vw;
+        font-size:small;
+        text-align: center; 
+    }
+    
+    .profile{
+        flex: 60%;
+        padding: 2vw 2vw 2vw 2vw;
+        display: inline-block;
+        
+    }
+    
+    .profile h2{
+        padding-bottom:10px;
+        text-align: center;
+    }
+    
+    .profile h3{
+        padding-bottom:20px;
+        text-align: justify;
+    }
+
+    .profile p{
+        text-align: center;
+    }
+}
+
+/* creating infinite carousel of logos */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow:hidden;
+    padding: 50px 0;
+    white-space: nowrap;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+.logos-slide img{
+    height: 30px;
+    margin: 0 30px;
+}
+
+/* styling article section */
+article {
+    padding-top:50px;
+    padding-bottom:50px;
+    background: linear-gradient(45deg,#cef1d0,#39e75f);
+}
+
+article h2 {
+    text-align: center;
+}
+
+/* styling solutions article section with grid for normal screen resolution >800px */
+.featured{
+    padding: 3.5vw 3.5vw;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(0,1fr));
+    grid-auto-flow: row;
+    grid-gap: 20px;
+}
+
+/* styling solutions article section with max 2 horizontal grids for screen resolution <=800px */
+@media (max-width: 800px){
+    article {
+        padding-top:20px;
+        padding-bottom:20px;
+        background: linear-gradient(45deg,#cef1d0,#39e75f);
+    }
+    
+    .featured{
+        padding: 3.5vw 3.5vw;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-rows: repeat(auto-fit,minmax(0,1fr));
+        grid-auto-flow: row;
+        grid-gap: 20px;
+    }
+}
+
+/* styling pricing wrapper and padding */
+
+
+.pricing{
+    background-image: url(assets/mdb-bg.png);
+    background-attachment:fixed;
+    padding:5vw 5vw;
+    line-height: 1.5;
+    text-align: center;
+    color:white;
+}
+
+/* styling table */
+table {
+    border-collapse:collapse;
+    border-style:hidden;
+}
+
+table td {
+    border: 2px solid white;
+}
+table th {
+    border: 5px solid white;
+}
+
+th, td {
+    padding:5px 20px;
+}
+
+td:nth-child(3){
+    background-color: #39e75f;
+    color:black;
+}
+
+td:nth-child(2){
+    background-color: #cef1d0;
+    color:black;
+}
+
+/* styling events section with flex for screen resolution >800px */
+.content{
+    background-color: white;
+    padding:1.2vw 1.2vw;
+    border-radius: 1em 1em;
+    border-color: black;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.content:hover{
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    border-bottom: 5px solid #023430;
+    transition: ease-in 0.2s;
+}
+
+.content a:hover{
+    text-decoration: underline;
+}
+
+.event-menu{
+    padding: 3.5vw 3.5vw;
+}
+
+.event-menu h2{
+    padding-bottom: 3vw;
+    text-align: center;
+}
+
+.events{
+    background-color: white;
+    height: min-content;
+    padding:1.2vw 2vw 1.2vw 2vw;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    gap: 10px 20px;
+}
+
+/* styling events section with flex for screen resolution <=800px */
+@media (max-width: 800px){
+    .events{
+        background-color: white;
+        height: min-content;
+        padding:1.2vw 2vw 1.2vw 2vw;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-rows: repeat(auto-fit,minmax(0,1fr));
+        grid-auto-flow: row;
+        grid-gap: 20px;
+    }
+}
+
+/* universal styling for event descriptions regardless of screen resolution */
+.descriptions {
+    background-color: #00ED64;
+    padding:1.2vw 1.2vw 1.2vw 1.2vw;
+    border-radius: 1em 1em;
+    border-color: black;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.descriptions:hover{
+    box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
+    border-bottom: 5px solid #023430;
+    transition: ease-in 0.2s;
+}
+
+.descriptions a:hover{
+    text-decoration: underline;
+}
+
+/* styling form title */
+
+form h2{
+    text-align: center;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+}
+
+
+
+
+
+/* styling form & picture with flex for screen resolution >800px*/
+@media (min-width: 800px){
+    .container{
+        padding: 0vw 2vw;
+        display: flex;
+        flex: row;
+        width:100%;
+        justify-content: center;
+    }
+
+    .form-fill{
+        width: 40%;
+    }
+
+    .form-pic{
+        text-align: center;
+        align-content: center;
+    }
+    
+    form ul li{
+        font-size: 1vw;
+        align-content: center;
+    }
+
+}
+
+@media (max-width: 800px){
+    .container{
+        padding: 0 2vw;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .form-fill{
+        width:400px;
+    }
+
+    /* hiding form picture decoration for screen resolution <=800px*/
+    .form-pic img {
+        display:none;
+    }
+
+    .form-fill button{
+        width:20%;
+        text-align: center;
+    }
+
+/* adjusting radio button & input text size for screen resolution <=800px*/
+    form ul li{
+        font-size: 2vh;
+        align-content:center;
+    }
+
+    input[type=text]{
+        font-size:2.2vh;
+    }
+
+    label{
+        font-size:2.2vh;
+    }
+}
+
+
+/* universal styling of form regardless of screen resolution*/
+form {
+    color:white;
+    background-color:#001E2B;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:3.5vw;
+}
+
+/* styling label & input with flex*/
+label,input[type=text]{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-align: left;
+    width: 300px;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+
+/* styling input*/
+input[type=text]{
+    color:white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 150;
+    letter-spacing: 0.02
+    font-size:1.2vw;
+    border: none;
+    border-radius: 0.5em 0.5em;
+    padding: 0.5em 0.5em;
+    margin-bottom: 1em;
+    width: 350px;
+    height: 1.5em;
+    background-color:#023430;
+    border-bottom:2px solid white;
+}
+
+/* styling focus and hovered text area*/
+
+textarea:focus, input:focus{
+    height: 2em;
+    border-bottom:2.2px solid #00ED64;
+    transition: height 0.5s;
+    outline: none; /* deleting default input outline when clicked */
+}
+
+textarea:hover, input:hover{
+    border-bottom:2px solid #00ED64;
+}
+
+/* styling radio buttons*/
+form ul {
+    list-style-type: none;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+
+
+
+/* styling form area for screen resolution <=800px*/
+
+footer{
+    background-color: #cef1d0;
+    border-color: none;
+    text-align: center;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+}
+.contact-sg{
+    flex:50%;
+}
+
+.contact-us{
+    flex:50%;
+}
