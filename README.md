@@ -30,3 +30,25 @@ From this research, I decided that the website should contain at least:
 4. Information about Pricing
 5. Information about recent Events or Programs
 6. Plenty of Click-to-Action: sign up, contact sales, or subscribe to newsletter
+
+### 2. Planning the design of the website
+This involves manually sketching and arranging the components of the web, downloading reference images and color scheme of MongoDB websites, such as ones shown below. 
+
+![icon](./assets/icon2.svg)
+![icon](./assets/icon1.svg)
+![icon](./assets/color-scheme.svg)
+
+These icons and color references are available at MongoDB Brand Resources website [here](https://www.mongodb.com/company/newsroom/brand-resources).
+
+### 3. Lastly is the execution of writing down HTML, CSS, and JS code according to the plans above. Here are some important components that I design. 
+
+1. The landing of the page starts with a simple and visual introduction on MongoDB. This includes big logos, video, and plenty click-to-action buttons.
+![icon](./assets/1-a.png)
+![icon](./assets/1-b.png)
+
+I use **Flex** to divide between short description and icon or video. Additionally, I created an **infinitely-moving logo carousell** to show visitors a list of MongoDB customers. 
+
+3. 
+
+4. 
+5. 
