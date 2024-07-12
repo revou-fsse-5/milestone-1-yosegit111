@@ -25,7 +25,17 @@ This involves understanding the elements necessary to build a proper website. As
 
 While MongoDB itself emphasizes on visuals, most of the other websites focus more on providing information. 
 
-Google Cloud Platform's website for example, is heavily loaded with product and pricing information: 
+Google Cloud Platform's website for example, is heavily loaded with product and pricing information.
+
+From this research, I decided that the website should contain at least:
+1. A navigation bar to go through all pages quickly
+2. An introductory information about the Product
+3. Further details about Solutions
+4. Information about Pricing
+5. Information about recent Events or Programs
+6. Plenty of Click-to-Action: sign up, contact sales, or subscribe to newsletter
+
+
 
 
 ### 1. Planning the skeleton of the website
