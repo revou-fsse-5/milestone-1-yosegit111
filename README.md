@@ -40,7 +40,8 @@ These icons and color references are available at MongoDB Brand Resources websit
 
 Other than that, I also need to import external font library, which are **Lexend Deca** and **Noto Serif** - two official MongoDB fonts. 
 
-## 3. Lastly is the execution of writing down HTML, CSS, and JS code according to the plans above. Here are some important components that I design. 
+## 3. Writing down HTML & CSS
+Next is the execution of writing down HTML, CSS, and JS code according to the plans above. Here are some important components that I design. 
 
 ### A. Landing Page, Infinitely Sliding Carousel and Navbar 
 The landing of the page starts with a simple and visual introduction on MongoDB. This includes big logos, video, and plenty click-to-action buttons.
@@ -59,6 +60,7 @@ Scrolling further down, you'll find multiple information like solutions, pricing
 
 ### C. Form and Footer
 Other elements that I created include **form**, which itself leverage multiple **flex** wrappers to generate this result. First flex wrapper involve a big **container** that separates the form and form image. Whereby the second flex wrapper arranges **label and input text area** in flex column display.
+
 ![ss](./assets/4.png)
 
 Additionally, to wrap the website at the end of the page, I added a footer than contains MongoDB office and contact information. 
@@ -79,3 +81,21 @@ One challengeing aspect of my work includes having to ensure **responsiveness** 
 To make the website more appealing, I implemented interactivity using transform (e.g. form and buttons) and translate (e.g. hamburger button turning to X). 
 ![ss](./assets/6-a.png)
 ![ss](./assets/6-b.png)
+
+
+## 4. Deploying the Website
+Lastly is the process of deploying the Website. 
+
+For this, I first connected my Github repository to my Netlify account. 
+![ss](./assets/connect.png)
+
+Then, I deployed my page on Netlify. 
+![ss](./assets/netdeploy.png)
+
+After that, I purchased a domain on Niaga Hoster. 
+![ss](./assets/purchase.png)
+
+Lastly, I connected my purchased domain on Netlify, as well as configuring the name servers back on Niaga Hoster. 
+![ss](./assets/connectdomain.png)
+
+Done, my website is live!
