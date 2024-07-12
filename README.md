@@ -14,6 +14,8 @@ Tech sales professional currently working as Account Executive at MongoDB.
 I'm building a simple HTML site for MongoDB so it's easier for people to explore our solutions. In this website, you can navigate through different information, including various MongoDB Solutions across features and industries, pricing information, events, and signed up for accounts or newsletter. 
 ![websiteview](./assets/screenshots.png)
 
+Visit my website [HERE](mdb-indo.com)
+
 In building this website, there are 3 main steps that I did:
 
 ## 1. Planning the skeleton of the website
