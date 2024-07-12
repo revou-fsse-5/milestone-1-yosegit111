@@ -19,11 +19,9 @@ Visit my website [HERE](mdb-indo.com)
 In building this website, there are 3 main steps that I did:
 
 ## 1. Planning the skeleton of the website
-This involves understanding the elements necessary to build a proper website. As references I look into mongodb.com own's website, and several other, similar cloud companies like Google and Amazon. 
+This involves understanding the elements necessary to build a proper website for a technology solution. As references, I look into [mongodb.com](mongodb.com)'s website - along with several others, including similar cloud companies like Google and Amazon. 
 
-While MongoDB itself emphasizes on visuals, most of the other websites focus more on providing information. 
-
-Google Cloud Platform's website for example, is heavily loaded with product and pricing information.
+While MongoDB itself emphasizes on visuals, most of the other websites focus more on providing information. [Google Cloud Platform](cloud.google.com)'s website for example, is heavily loaded with product and pricing information without much design. 
 
 From this research, I decided that the website should contain at least:
 1. A navigation bar to go through all pages quickly
@@ -34,47 +32,77 @@ From this research, I decided that the website should contain at least:
 6. Plenty of Click-to-Action: sign up, contact sales, or subscribe to newsletter
 
 ## 2. Planning the design of the website
-This involves manually sketching and arranging the components of the web, downloading reference images and color scheme of MongoDB websites, such as one shown below. 
+This involves manually sketching the components of the site so that it makes sense to navigate through. It also involves the research on [brand resources] (https://www.mongodb.com/company/newsroom/brand-resources), downloading reference images and icons from MongoDB website. 
 
 ![color](./assets/color-scheme.svg)
 
-These icons and color references are available at MongoDB Brand Resources website [here](https://www.mongodb.com/company/newsroom/brand-resources).
-
-Other than that, I also need to import external font library, which are **Lexend Deca** and **Noto Serif** - two official MongoDB fonts. 
+Other than icons and color scheme, an external library for fonts are also required because MongoDB doesn't use standard fonts. Rather, it uses **Lexend Deca** and **Noto Serif**.
 
 ## 3. Writing down HTML & CSS
 Next is the execution of writing down HTML, CSS, and JS code according to the plans above. Here are some important components that I design. 
 
 ### A. Landing Page, Infinitely Sliding Carousel and Navbar 
-The landing of the page starts with a simple and visual introduction on MongoDB. This includes big logos, video, and plenty click-to-action buttons.
+The landing of the page starts with a simple and visual introduction on MongoDB. This includes big logos, video, and plenty click-to-action buttons. Writing the HTML on this part is rather easy as it does not contain much information, but I spent hours just designing the navbar, header, and 'About Us' section. 
 ![ss](./assets/1-a.png)
 ![ss](./assets/1-b.png)
 
-I use **Flex** to divide between short description and icon or video. Additionally, I created an **infinitely-moving logo carousell** to show visitors a list of MongoDB customers. 
+In short, I leverage **Flex** to divide between WORDS and VISUALS - such as between the Title Header and Icon, or About Us with Video (Figure). To make the website more appealing, I created an **infinitely-moving logo carousell** to show visitors a list of notable MongoDB customers. As I couldn't figure this out on my own, I took reference from Youtube videos and external websites. 
 
-This first section is very important in ensuring easy navigation for customers, so I designed a **fixed position** Navbar at the very top of the page. 
+I also took sometime designing the **Navbar**. It took a while to clear the default list styling, fixed it afloat on the upper-left part of the page, and style both the default appearance - as well as the appearance on hover. 
 ![ss](./assets/6-a.png)
 
+![ss](./assets/navbar-code-1.png)
+![ss](./assets/navbar-code-2.png)
+
+
 ### B. Utilizing Grid, Flex, and Table for contents
-Scrolling further down, you'll find multiple information like solutions, pricing, and events. I utilize different css styling for each of these elements. For **solutions part**, I use Grid for all screen resolutions. Meanwhile, I only use Table for **pricing**. Then, I leverage **flex** for **events** when screen resolution is above 800px, and **grid** when screen resolution is less than 800px.
+Scrolling further down, you'll find multiple information like solutions, pricing, and events. I utilize different styling for each of these elements.
+|Elements   |Style   |
+|-------|------------|
+|Solutions   |Grid|
+|Pricing  |Table   |
+|Events   |Flex     | 
+|Form   |Flex (Double wrapper) | 
+
 ![ss](./assets/2.png)
 ![ss](./assets/3.png)
+
 
 ### C. Form and Footer
 Other elements that I created include **form**, which itself leverage multiple **flex** wrappers to generate this result. First flex wrapper involve a big **container** that separates the form and form image. Whereby the second flex wrapper arranges **label and input text area** in flex column display.
 
 ![ss](./assets/4.png)
 
+![ss](./assets/form-code-1.png)
+![ss](./assets/form-code-2.png)
+
+
 Additionally, to wrap the website at the end of the page, I added a footer than contains MongoDB office and contact information. 
 
 ### D. Making Responsive Website
 One challengeing aspect of my work includes having to ensure **responsiveness** of the website across different screen sizes. For this, I:
 1. Leverage media query that separates between screen <800px and >=800px. I implement this to things like Navbar - which turns into hamburger button once click. I also changed grid and flex arrangement, such as one for the **solutions** section, which reduces the grid column from 4 to 2 when screen size is small.
+|Elements   |<800px Style   |
+|-------|------------------|
+|Navbar   |Hamburger Button|
+|Header  |Changed Flex direction from Row to Column, text alignment changed, using img srcset |
+|About Us   |Changed Flex direction from Row to Column, text alignment changed     | 
+|Solutions   |Max Grid column changed from 4 to 2 | 
+|Form   |No flex, image hidden|
+
 ![ss](./assets/5-b.png)
 
-2. Use relative measurements such as vw, vh, em, and many more. I also change units of measurement for **landscape** (assuming media screen >800px) and **portrait** (assuming media screen <800px) - by using **vw** for landscape screen and **vh** for portrait screen for some objects. This ensures readability across different screen sizes and orientation.
+One of the biggest challenge was to implement hamburger button. For this, I watched some useful Youtube tutorials, one of which shows the steps to make hamburger button from scratch, using span & translate. 
 
-3. Implementing img srcset so the website will retrieve best-suited image for the screen size - such as one for header. (hint: try reloading your web if the picture is not updated upon screen resize!)
+We start with designing an 'off-screen menu' at a negative x-axis coordinate (in this case -450px). 
+![ss](./assets/offscreen-1.png)
+
+We then bring the x-axis coordinate to positive when status of menu is active. 
+![ss](./assets/offscreen-2.png)
+
+3. Use relative measurements such as vw, vh, and em. I also change units of measurement for **LANDSCAPE** (assuming media screen >800px) and **PORTRAIT** (assuming media screen <800px) - by using **VW** for landscape screen and **VH** for portrait screen (for some objects). This ensures readability across different screen sizes and orientations.
+
+4. Implementing IMG SRCSET so the website will retrieve best-suited image for the screen size - such as one for header. (hint: try reloading your web if the picture is not updated upon screen resize!)
 ![ss](./assets/5-1.png)
 ![ss](./assets/5-c.png)
 ![ss](./assets/5-d.png)
