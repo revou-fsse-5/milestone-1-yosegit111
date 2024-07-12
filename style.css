@@ -164,7 +164,7 @@ nav ul li a {
   }
 
 nav ul li a:hover {
-    font-size: 1.2vw;
+    font-size: 1.05vw;
     box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
     border-bottom: 5px solid #023430;
     transition: ease-in 0.2s;
@@ -182,6 +182,7 @@ nav ul li a:hover {
         background-color: white;
         position:fixed;
         box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+        z-index:1;
     }
 
 .menu{
@@ -232,6 +233,7 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     transition: .3s ease;
+    z-index:1
 }
 
 .off-screen-menu.active {
@@ -342,6 +344,7 @@ button {
 }
 
 .signupButton:hover{
+    border-bottom: 2px solid white;
     box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
     transition: ease-in 0.2s;
 }
@@ -354,6 +357,7 @@ button {
 }
 
 .contactButton:hover{
+    border-bottom: 2px solid black;
     box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
     transition: ease-in 0.2s;
 }
@@ -368,7 +372,7 @@ button {
 }
 
 .submitButton:hover{
-    border-bottom: 5px solid white;
+    border-bottom: 2px solid white;
     box-shadow: 0 7px 5px 0 rgba(0,0,0,.5);
     transition: ease-in 0.2s;
 }
@@ -628,7 +632,7 @@ form h2{
 /* styling form & picture with flex for screen resolution >800px*/
 @media (min-width: 800px){
     .container{
-        padding-left: 2vw;
+        padding: 0vw 2vw;
         display: flex;
         flex: row;
         width:100%;
@@ -637,11 +641,9 @@ form h2{
 
     .form-fill{
         width: 40%;
-        padding-left: 2vw;
     }
 
     .form-pic{
-        padding-left:2vw;
         text-align: center;
         align-content: center;
     }
@@ -655,14 +657,15 @@ form h2{
 
 @media (max-width: 800px){
     .container{
-        padding-left: 2vw;
-        width:100%;
+        padding: 0 2vw;
+        width: 100%;
+        display: flex;
         justify-content: center;
+        
     }
 
     .form-fill{
-        width: 100%;
-        padding-left: 2vw;
+        width:400px;
     }
 
     /* hiding form picture decoration for screen resolution <=800px*/
