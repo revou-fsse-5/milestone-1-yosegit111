@@ -58,7 +58,7 @@ I also took sometime designing the **Navbar**. It took a while to clear the defa
 Scrolling further down, you'll find multiple information like solutions, pricing, and events. I utilize different styling for each of these elements.
 |Elements   |Style   |
 |-------|------------|
-|Solutions   |Grid|
+|Solutions   |Grid |
 |Pricing  |Table   |
 |Events   |Flex     | 
 |Form   |Flex (Double wrapper) | 
@@ -81,6 +81,7 @@ Additionally, to wrap the website at the end of the page, I added a footer than 
 ### D. Making Responsive Website
 One challengeing aspect of my work includes having to ensure **responsiveness** of the website across different screen sizes. For this, I:
 1. Leverage media query that separates between screen <800px and >=800px. I implement this to things like Navbar - which turns into hamburger button once click. I also changed grid and flex arrangement, such as one for the **solutions** section, which reduces the grid column from 4 to 2 when screen size is small.
+
 |Elements   |Style on Smaller Screen  |
 |-------|-------------------------------|
 |Navbar   |Hamburger Button|
