@@ -12,9 +12,8 @@ Tech sales professional currently working as Account Executive at MongoDB.
 
 ## What I'm Building
 I'm building a simple HTML site for MongoDB so it's easier for people to explore our solutions. In this website, you can navigate through different information, including various MongoDB Solutions across features and industries, pricing information, events, and signed up for accounts or newsletter. 
-![websiteview](./assets/screenshots.png)
-
 Visit my website [HERE](mdb-indo.com)
+![websiteview](./assets/screenshots.png)
 
 In building this website, there are 3 main steps that I did:
 
@@ -32,7 +31,7 @@ From this research, I decided that the website should contain at least:
 6. Plenty of Click-to-Action: sign up, contact sales, or subscribe to newsletter
 
 ## 2. Planning the design of the website
-This involves manually sketching the components of the site so that it makes sense to navigate through. It also involves the research on [brand resources] (https://www.mongodb.com/company/newsroom/brand-resources), downloading reference images and icons from MongoDB website. 
+This involves manually sketching the components of the site so that it makes sense to navigate through. It also involves the research on [brand resources](https://www.mongodb.com/company/newsroom/brand-resources), downloading reference images and icons from MongoDB website. 
 
 ![color](./assets/color-scheme.svg)
 
@@ -82,8 +81,8 @@ Additionally, to wrap the website at the end of the page, I added a footer than 
 ### D. Making Responsive Website
 One challengeing aspect of my work includes having to ensure **responsiveness** of the website across different screen sizes. For this, I:
 1. Leverage media query that separates between screen <800px and >=800px. I implement this to things like Navbar - which turns into hamburger button once click. I also changed grid and flex arrangement, such as one for the **solutions** section, which reduces the grid column from 4 to 2 when screen size is small.
-|Elements   |<800px Style   |
-|-------|------------------|
+|Elements   |Style on Smaller Screen  |
+|-------|-------------------------------|
 |Navbar   |Hamburger Button|
 |Header  |Changed Flex direction from Row to Column, text alignment changed, using img srcset |
 |About Us   |Changed Flex direction from Row to Column, text alignment changed     | 
