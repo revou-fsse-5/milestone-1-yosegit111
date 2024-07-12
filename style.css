@@ -806,7 +806,9 @@ input[type=text]{
     border-bottom:2px solid white;
 }
 @media (max-width: 800px){
-    font-size: 1.5vh;
+input[type=text]{
+    font-size: 1.8vh;
+}
 }
 /* styling focus and hovered text area*/
 
